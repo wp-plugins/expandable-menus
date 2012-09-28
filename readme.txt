@@ -1,4 +1,4 @@
-=== Multisite Themes ===
+=== Expandable Menus ===
 Contributors: maxaud
 Donate link: http://playforward.net/
 Tags: expandable,menu,admin,collapsable
