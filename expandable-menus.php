@@ -13,13 +13,27 @@ Author URI: http://playforward.net
 	function EM_admin_head(){
 	
 		// echo css and javascript
+		$plus_path = includes_url('/images/admin-bar-sprite.png');
 		echo '
 			<style>
 				.expand_hidden {
 					display: none;
 				}
 				.minimized .menu-item-handle {
-					border-right: 7px solid #298cba;
+					border-right: 20px solid #298cba;
+					overflow: visible !important;
+				}
+				.minimized .item-type {
+					position:relative;
+					left: 40px;
+					padding-right: 50px;
+					background: url("' . $plus_path . '") 60px -181px no-repeat;
+					cursor: s-resize;
+				}
+				.expander {
+					position: absolute;
+					top: 0px;
+					left: 420px;
 				}
 			</style>
 			<!-- Expandable Menu Code -->
