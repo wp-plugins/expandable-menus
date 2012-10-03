@@ -4,7 +4,7 @@ Donate link: http://playforward.net/
 Tags: expandable,menu,admin,collapsable
 Requires at least: 3.0
 Tested up to: 3.4.3
-Stable tag: 1.0
+Stable tag: 1.1
 
 Allows you to collapse and expand the WordPress admin menus(Appearance > Menus).
 
@@ -42,7 +42,13 @@ Ask me some!
 = 1.0 =
 * First Release.
 
+= 1.1 =
+* Fixed icon alignment issue.
+
 == Upgrade Notice ==
 
 = 1.0 =
 First release
+
+= 1.1 =
+*Fixes icon alignment issues.

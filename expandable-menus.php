@@ -4,7 +4,7 @@ Plugin Name: Expandable Menus
 Plugin URI: http://playforward.net
 Description: Allows you to expand and collapse menus in WordPress admin.
 Author: Dustin Dempsey
-Version: 1.0
+Version: 1.1
 Author URI: http://playforward.net
 */
 
@@ -29,6 +29,9 @@ Author URI: http://playforward.net
 					padding-right: 50px;
 					background: url("' . $plus_path . '") 60px -181px no-repeat;
 					cursor: s-resize;
+				}
+				.menu-item-custom.minimized .item-type {
+					background: url("' . $plus_path . '") 76px -181px no-repeat;
 				}
 				.expander {
 					position: absolute;
