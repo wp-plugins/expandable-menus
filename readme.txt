@@ -36,6 +36,8 @@ Ask me some!
 
 == Screenshots ==
 
+1. The edit menu screen with a couple menus collapsed.
+
 
 == Changelog ==
 
