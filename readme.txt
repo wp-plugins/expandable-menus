@@ -3,21 +3,31 @@ Contributors: maxaud
 Donate link: http://playforward.net/
 Tags: expandable,menu,admin,collapsable
 Requires at least: 3.0
-Tested up to: 3.4.3
-Stable tag: 1.1
+Tested up to: 3.6
+Stable tag: 2.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Allows you to collapse and expand the WordPress admin menus(Appearance > Menus).
+Allows you to collapse and expand the WordPress admin theme menus (Appearance > Menus).
 
 == Description ==
 
-When creating a menu under the "Appearance -> Menus" tab it allows you to double click to expand and collapse a menu.
+When creating a menu under the "Appearance -> Menus" tab it allows you to double click to expand and collapse a menu tree.
 
 This is particularly useful for large menus or menus with many different sub trees that take up screen space.
 
+Minimized menus will be saved as a cookie so when you return they should be minimized again.
+
+**Requirements**
+
+* Javascript is required.
+* A browser that supports the :after CSS selector is required to show the minimized indicators (IE7 and IE8 may not show them).
+
 **Future releases:**  
-* Images to show collapsed menus rather than just a blue marker.
-* Double-click visual feedback.
-* your ideas!
+
+*   Images to show collapsed menus rather than just a blue marker.
+*   Double-click visual feedback.
+*   your ideas!
 
 == Installation ==
 
@@ -31,7 +41,9 @@ Drop into either your /mu-plugins/ directory, or your plugins directory and acti
 
 = None yet =
 
-Ask me some!
+**Why isn't this working?**
+
+* Have you tried double clicking? A lot of people dont understand you have to double click to minimize as there wasn't initially an indicator telling you to do so.
 
 
 == Screenshots ==
@@ -42,15 +54,33 @@ Ask me some!
 == Changelog ==
 
 = 1.0 =
+
 * First Release.
 
 = 1.1 =
+
 * Fixed icon alignment issue.
+
+= 2.0 =
+
+* Revamped javascript.
+* Supports over 200 menus now.
+* Different indicators on hover and when minimized
+* Saves minimized menus in a cookie so you don't have to minimize every time the page is loaded.
 
 == Upgrade Notice ==
 
 = 1.0 =
+
 First release
 
 = 1.1 =
-*Fixes icon alignment issues.
+
+* Fixes icon alignment issues.
+
+= 2.0 =
+
+* Revamped javascript.
+* Supports over 200 menus now.
+* Different indicators on hover and when minimized
+* Saves minimized menus in a cookie so you don't have to minimize every time the page is loaded.
