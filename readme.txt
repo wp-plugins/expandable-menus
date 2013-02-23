@@ -4,7 +4,7 @@ Donate link: http://playforward.net/
 Tags: expandable,menu,admin,collapsable
 Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,10 @@ Drop into either your /mu-plugins/ directory, or your plugins directory and acti
 * Different indicators on hover and when minimized
 * Saves minimized menus in a cookie so you don't have to minimize every time the page is loaded.
 
+= 2.1 =
+
+* Addresses a javascript error, see support forum.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -84,3 +88,7 @@ First release
 * Supports over 200 menus now.
 * Different indicators on hover and when minimized
 * Saves minimized menus in a cookie so you don't have to minimize every time the page is loaded.
+
+= 2.1 =
+
+* Addresses a javascript error, see support forum.

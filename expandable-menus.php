@@ -4,7 +4,7 @@ Plugin Name: Expandable Menus
 Plugin URI: http://playforward.net
 Description: Allows you to expand and collapse theme menus in WordPress admin.
 Author: Dustin Dempsey
-Version: 2.0
+Version: 2.1
 Author URI: http://playforward.net
 */
 
@@ -14,6 +14,7 @@ Author URI: http://playforward.net
 	
 		// echo css and javascript
 		$plus_path = includes_url('/images/admin-bar-sprite.png');
+		
 		echo '
 			<style>
 				.expand_hidden {
@@ -75,15 +76,19 @@ Author URI: http://playforward.net
 				}
 				
 				function expand_get( c_name ) {
-					var i,x,y,ARRcookies = document.cookie.split(";");
-					for ( i=0; i<ARRcookies.length; i++ ) {
-						x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-						y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-						x=x.replace(/^\s+|\s+$/g,"");
-						if ( x == c_name ) {
-							return unescape( y );
+					if ( document.cookie ) {
+						var i,x,y,ARRcookies = document.cookie.split(";");
+						for ( i=0; i<ARRcookies.length; i++ ) {
+							x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+							y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+							x=x.replace(/^\s+|\s+$/g,"");
+							if ( x == c_name ) {
+								return unescape( y );
+							}
 						}
-					}	
+					} else {
+						return false;
+					}
 				}
 				
 				jQuery(document).ready(function(){
@@ -292,28 +297,37 @@ Author URI: http://playforward.net
 					
 					var process_cookie = function() {
 					
-						// if we still have items in the array to process
-						if ( cookies.length > 0 ) {
+						if ( cookies ) {
 						
-							// trigger double click on item
-							var current_item = cookies[0];
-							jQuery("#"+current_item).trigger( "dblclick" );
+							// if we still have items in the array to process
+							if ( cookies.length > 0 ) {
 							
-							// remove item from array
-							cookies.splice( 0, 1 );
-							
-							// process again
-							process_cookie();
-						
+								// trigger double click on item
+								var current_item = cookies[0];
+								jQuery("#"+current_item).trigger( "dblclick" );
+								
+								// remove item from array
+								cookies.splice( 0, 1 );
+								
+								// process again
+								process_cookie();
+							}
 						}
 					}
 					
-					// get minimized items and revrse array to work backwards
-					var cookies = cookie.split("|");
-					cookies = cookies.reverse();
+					if ( cookie ) {
 					
-					// process cookie items
-					process_cookie();
+						// get minimized items and revrse array to work backwards
+						var cookies = cookie.split("|");
+						
+						if ( cookies ) {
+						
+							cookies = cookies.reverse();
+							
+							// process cookie items
+							process_cookie();
+						}
+					}
 				});
 			</script>
 			<!-- END expanadable menu code -->
